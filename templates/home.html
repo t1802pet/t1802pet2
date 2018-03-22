@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+
+{% block title %}home.html{% endblock %}
+
+{% load staticfiles %}
+
+{% block content %}
+
+<section class="showcase">
+      <div class="container-fluid p-0">
+        <div class="row no-gutters">
+
+          <div class="col-lg-6 order-lg-2 text-white showcase-img" style="background-image: url('../../static/main/img/hos.jpg'); " ></div>
+          <div class="col-lg-6 order-lg-1 my-auto showcase-text">
+              <a href="{% url 'blog:index' %}"><h2>병원가기</h2></a>
+            <p class="lead mb-0"> 당신의 동물병원을 찾아보세요.</p>
+              <p class="lead mb-0"> 예약도 가능하답니다</p>
+          </div>
+        </div>
+        <div class="row no-gutters">
+          <div class="col-lg-6 text-white showcase-img" style="background-image: url('../../static/main/img/list.jpg');" ></div>
+          <div class="col-lg-6 my-auto showcase-text">
+              <a href="{% url 'bookmark:index' %}"><h2>펫기록부</h2></a>
+            <p class="lead mb-0">
+                반려동물의 진료기록을 확인해보세요. </p>
+            <p class="lead mb-0">  예방접종 날짜도 확인할 수 있어요..</p>
+          </div>
+        </div>
+        <div class="row no-gutters">
+          <div class="col-lg-6 order-lg-2 text-white showcase-img" style="background-image: url('../../static/main/img/dog.jpg');"></div>
+          <div class="col-lg-6 order-lg-1 my-auto showcase-text">
+              <a href="{% url 'photo:index' %}"><h2>펫친구들</h2></a>
+            <p class="lead mb-0">
+                당신의 펫을 자랑해보세요.</p>
+                <p class="lead mb-0">
+                    사진을 올리고 </p>
+                    <p class="lead mb-0">정보를 공유해보세요</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+{% endblock content %}
